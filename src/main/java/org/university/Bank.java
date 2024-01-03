@@ -8,15 +8,10 @@ public class Bank {
     private final Random random = new Random();
     private final List<BankAccount> accounts = new ArrayList<>();
 
-    public BankAccount createAccount(String accountName, double initialDeposit) throws NegativeAmountException{
-        if (initialDeposit < 0) {
-                throw new NegativeAmountException("Cannot create an account with a negative initial deposit.");
-        }
-        else {
-            BankAccount account = new BankAccount(random.nextInt(10000000, 100000000), accountName, initialDeposit);
-            accounts.add(account);
-            return account;
-        }
+    public BankAccount createAccount(String accountName, double initialDeposit) {
+        BankAccount account = new BankAccount(random.nextInt(10000000, 100000000), accountName, initialDeposit);
+        accounts.add(account);
+        return account;
 
 
     }

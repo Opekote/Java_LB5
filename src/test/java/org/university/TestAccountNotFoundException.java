@@ -11,12 +11,7 @@ public class TestAccountNotFoundException
     @BeforeEach
      void setUp(){
         bank = new Bank();
-        try {
-            bankAccount = bank.createAccount("Test",1000);
-        }
-        catch (NegativeAmountException ex){
-            System.err.println(ex.getMessage());
-        }
+        bankAccount = bank.createAccount("Test",1000);
     }
 
     @Test

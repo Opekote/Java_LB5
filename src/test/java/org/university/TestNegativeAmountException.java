@@ -13,13 +13,8 @@ public class TestNegativeAmountException {
     @BeforeEach
     void setUp(){
         bank = new Bank();
-        try {
-            bankAccount1 = bank.createAccount("Test1",1000);
-            bankAccount2 = bank.createAccount("Test2",1000);
-        }
-        catch (NegativeAmountException ex){
-            System.err.println(ex.getMessage());
-        }
+        bankAccount1 = bank.createAccount("Test1",1000);
+        bankAccount2 = bank.createAccount("Test2",1000);
     }
 
     @Test
